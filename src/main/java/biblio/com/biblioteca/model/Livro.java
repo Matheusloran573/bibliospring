@@ -13,9 +13,10 @@ public class Livro {
     private Long id;
     private String titulo;
     private String autor;
-    private boolean disponivel;
+    private int anoPublicacao;
+    private String genero;
+    private boolean disponivel; 
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -38,6 +39,22 @@ public class Livro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public int getAnoPublicacao() {
+        return anoPublicacao;
+    }
+
+    public void setAnoPublicacao(int anoPublicacao) {
+        this.anoPublicacao = anoPublicacao;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public boolean isDisponivel() {

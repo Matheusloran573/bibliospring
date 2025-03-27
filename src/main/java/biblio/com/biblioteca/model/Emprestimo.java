@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import java.time.LocalDate;
 
 @Entity
 public class Emprestimo {
@@ -20,10 +19,8 @@ public class Emprestimo {
     @ManyToOne
     private Usuario usuario;
 
-    private LocalDate dataEmprestimo;
-    private LocalDate dataDevolucao;
+    private boolean devolvido;
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -48,19 +45,11 @@ public class Emprestimo {
         this.usuario = usuario;
     }
 
-    public LocalDate getDataEmprestimo() {
-        return dataEmprestimo;
+    public boolean isDevolvido() {
+        return devolvido;
     }
 
-    public void setDataEmprestimo(LocalDate dataEmprestimo) {
-        this.dataEmprestimo = dataEmprestimo;
-    }
-
-    public LocalDate getDataDevolucao() {
-        return dataDevolucao;
-    }
-
-    public void setDataDevolucao(LocalDate dataDevolucao) {
-        this.dataDevolucao = dataDevolucao;
+    public void setDevolvido(boolean devolvido) {
+        this.devolvido = devolvido;
     }
 }

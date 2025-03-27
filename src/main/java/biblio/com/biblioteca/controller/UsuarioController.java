@@ -5,6 +5,7 @@ import biblio.com.biblioteca.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -21,6 +22,7 @@ public class UsuarioController {
 
     @PostMapping
     public Usuario salvarUsuario(@RequestBody Usuario usuario) {
+        usuario.setDataRegistro(LocalDate.now());
         return usuarioService.salvarUsuario(usuario);
     }
 
